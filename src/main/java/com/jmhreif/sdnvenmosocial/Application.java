@@ -14,10 +14,6 @@ public class Application {
 
     private String description, name, imageURL;
 
-    @Relationship(value = "PAID_USING", direction = Relationship.Direction.INCOMING)
-    @JsonIgnoreProperties("application")
-    List<Payment> payments;
-
     public Application(String applicationId, String description, String name, String imageURL) {
         this.applicationId = applicationId;
         this.description = description;
@@ -39,9 +35,5 @@ public class Application {
 
     public String getImageURL() {
         return imageURL;
-    }
-
-    public List<Payment> getPayments() {
-        return payments;
     }
 }

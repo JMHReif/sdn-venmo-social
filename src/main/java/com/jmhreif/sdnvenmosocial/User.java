@@ -16,12 +16,6 @@ public class User {
     private ZonedDateTime dateJoined;
     private String isActive, isBlocked, isGroup;
 
-    @Relationship("SENDS")
-    List<Payment> moneySent;
-
-    @Relationship(value = "PAID_TO", direction = Relationship.Direction.INCOMING)
-    List<Payment> moneyReceived;
-
     public User(String userId, String about, String displayName, String firstName, String lastName, String profilePicURL, String username, ZonedDateTime dateJoined, String isActive, String isBlocked, String isGroup) {
         this.userId = userId;
         this.about = about;
@@ -78,13 +72,5 @@ public class User {
 
     public String getIsGroup() {
         return isGroup;
-    }
-
-    public List<Payment> getMoneySent() {
-        return moneySent;
-    }
-
-    public List<Payment> getMoneyReceived() {
-        return moneyReceived;
     }
 }

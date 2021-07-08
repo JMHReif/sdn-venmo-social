@@ -16,15 +16,12 @@ public class Payment {
     private ZonedDateTime dateCreated, dateComplete;
 
     @Relationship("PAID_USING")
-    @JsonIgnoreProperties("payments")
     Application application;
 
     @Relationship(value = "SENDS",direction = Relationship.Direction.INCOMING)
-    @JsonIgnoreProperties({"moneySent", "moneyReceived"})
     User payingUser;
 
     @Relationship("PAID_TO")
-    @JsonIgnoreProperties({"moneyReceived", "moneySent"})
     User paidUser;
 
     public Payment(String paymentId, String type, String status, String action, String note, ZonedDateTime dateCreated, ZonedDateTime dateComplete) {

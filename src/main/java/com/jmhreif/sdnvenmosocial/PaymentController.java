@@ -14,5 +14,8 @@ public class PaymentController {
     }
 
     @GetMapping()
-    Iterable<Payment> findSomePayments() { return paymentRepo.findSomePayments(); }
+    Iterable<Payment> findAllPayments() { return paymentRepo.findAll(); }
+
+    @GetMapping("/pending")
+    Iterable<Payment> findPendingPayments() { return paymentRepo.findPaymentsByStatus(); }
 }
