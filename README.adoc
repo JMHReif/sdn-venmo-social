@@ -10,3 +10,9 @@ This application uses the following resources:
 == Data model
 
 image::venmo-social-data-model.png[]
+
+== Presentation
+
+PDF version of the accompanying presentation is published to SpeakerDeck.
+
+* https://speakerdeck.com/jmhreif/pouring-coffee-into-the-matrix-building-java-applications-on-neo4j[Pouring Coffee into the Matrix: Building Java Applications on Neo4j^]
